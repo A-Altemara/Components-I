@@ -1,3 +1,4 @@
+import { text } from 'express';
 import './article.less'
 // This is the data we will be using to create our articles. Look at it, then proceed to line 93.
 // OPTIONAL: if you're feeling adventurous, try to make this data an export from a different module, and import it here.
@@ -115,3 +116,35 @@ const data = [
   Step 5: Try adding new article object to the data array. Make sure it is in the same format as the others.
   Refresh the page to see the new article.
 */
+
+function articleMaker(){
+const article = document.createElement('div')
+article.classList.add('article')
+const title = document.createElement('h2')
+title.textContent = text
+const date = document.createElement('p')
+date.textContent = text
+const firstParagraph = document.createElement('p')
+firstParagraph.textContent = text
+const secondParagraph = document.createElement('p')
+secondParagraph.textContent = text
+const thirdParagraph = document.createElement('p')
+thirdParagraph.textContent = text
+const expandButton = document.createElement('button')
+expandButton.textContent = 'expand'
+
+const feed = document.querySelector('.articles')
+feed.appendChild(article)
+article.appendChild(title)
+article.appendChild(date)
+article.appendChild(firstParagraph)
+article.appendChild(secondParagraph)
+article.appendChild(thirdParagraph)
+article.appendChild(expandButton)
+
+  return testArticle
+}
+const testArticle = articleMaker({ title: 'foo', date: 'bar', firstParagraph: 'bat', secondParagraph: 'spam', thirdParagraph: 'kitty'})
+console.log(testArticle)
+articleMaker()
+
