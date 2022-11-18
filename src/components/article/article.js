@@ -204,8 +204,7 @@ expandButton.addEventListener("click", () =>{
   article.classList.toggle('article-open')
 })
 
-const feed = document.querySelector('.articles')
-feed.appendChild(article)
+
 article.appendChild(title)
 article.appendChild(date)
 article.appendChild(firstParagraph)
@@ -222,11 +221,10 @@ thirdParagraph.textContent = param.thirdParagraph
 
   return article
 }
-const testArticle = ({ title: 'foo', date: 'bar', firstParagraph: 'bat', secondParagraph: 'spam', thirdParagraph: 'kitty'})
-console.log(testArticle)
-articleMaker(testArticle)
+
+const feed = document.querySelector('.articles')
 
 data.forEach(data => {
   const newArt = articleMaker(data)
-  
+  feed.appendChild(newArt)
 })
