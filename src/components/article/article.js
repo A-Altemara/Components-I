@@ -116,8 +116,9 @@ const data = [
   Refresh the page to see the new article.
 */
 
-function articleMaker(){
+function articleMaker(testArticle){
 const article = document.createElement('div')
+article.classList.add('article')
 const title = document.createElement('h2')
 const date = document.createElement('p')
 const firstParagraph = document.createElement('p')
@@ -133,6 +134,13 @@ article.appendChild(firstParagraph)
 article.appendChild(secondParagraph)
 article.appendChild(thirdParagraph)
 article.appendChild(expandButton)
+
+title.textContent = title
+date.textContent = date
+firstParagraph.textContent = firstParagraph
+secondParagraph.textContent = secondParagraph
+thirdParagraph.textContent = thirdParagraph
+
 
   return testArticle
 }
