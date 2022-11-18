@@ -25,13 +25,7 @@ const article = document.createElement('div')
 // articleMaker()
 
 // article.classList.add('article')
-// title.textContent = text
-// date.textContent = text
 // date.classList.add('date')
-// firstParagraph.textContent = text
-// secondParagraph.textContent = text
-// thirdParagraph.textContent = text
-// expandButton.textContent = '+'
 // expandButton.classList.add('expandButton')
 
 // expandButton.addEventListener("click", () =>{
