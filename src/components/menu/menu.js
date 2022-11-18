@@ -34,7 +34,7 @@ let menuItems = [
 */
 
 function menuMaker(array) {
-  const head = document.querySelector('.menu-button')
+  const head = document.querySelector('.header')
   const menu = document.createElement('div')
   const list = document.createElement('ul')
 
