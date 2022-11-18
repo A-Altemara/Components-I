@@ -37,9 +37,9 @@ function menuMaker(array) {
   const head = document.querySelector('.menu-button')
   const menu = document.createElement('div')
   const list = document.createElement('ul')
+
   menu.appendChild(list)
   menu.classList.add('menu')
-
   head.appendChild(menu)
 
   const item = []
@@ -53,9 +53,7 @@ function menuMaker(array) {
   const menuButton = document.querySelector('.menu-button')
   menuButton.addEventListener('click', () => {
     menu.classList.toggle('menu--open')
-
   })
-
 
   return menu
 
