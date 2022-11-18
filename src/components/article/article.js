@@ -125,6 +125,15 @@ const firstParagraph = document.createElement('p')
 const secondParagraph = document.createElement('p')
 const thirdParagraph = document.createElement('p')
 const expandButton = document.createElement('button')
+expandButton.textContent = '+'
+
+article.classList.add('article')
+date.classList.add('date')
+expandButton.classList.add('expandButton')
+
+expandButton.addEventListener("click", () =>{
+  article.classList.toggle('article-open')
+})
 
 const feed = document.querySelector('.articles')
 feed.appendChild(article)
@@ -135,11 +144,11 @@ article.appendChild(secondParagraph)
 article.appendChild(thirdParagraph)
 article.appendChild(expandButton)
 
-title.textContent = title
-date.textContent = date
-firstParagraph.textContent = firstParagraph
-secondParagraph.textContent = secondParagraph
-thirdParagraph.textContent = thirdParagraph
+title.textContent = testArticle.title
+date.textContent = testArticle.date
+firstParagraph.textContent = testArticle.firstParagraph
+secondParagraph.textContent = testArticle.secondParagraph
+thirdParagraph.textContent = testArticle.thirdParagraph
 
 
   return testArticle
