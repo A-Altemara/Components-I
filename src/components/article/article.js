@@ -116,7 +116,7 @@ const data = [
   Refresh the page to see the new article.
 */
 
-function articleMaker(testArticle){
+function articleMaker(param){
 const article = document.createElement('div')
 article.classList.add('article')
 const title = document.createElement('h2')
@@ -144,16 +144,16 @@ article.appendChild(secondParagraph)
 article.appendChild(thirdParagraph)
 article.appendChild(expandButton)
 
-title.textContent = testArticle.title
-date.textContent = testArticle.date
-firstParagraph.textContent = testArticle.firstParagraph
-secondParagraph.textContent = testArticle.secondParagraph
-thirdParagraph.textContent = testArticle.thirdParagraph
+title.textContent = param.title
+date.textContent = param.date
+firstParagraph.textContent = param.firstParagraph
+secondParagraph.textContent = param.secondParagraph
+thirdParagraph.textContent = param.thirdParagraph
 
 
-  return testArticle
+  return article
 }
-const testArticle = articleMaker({ title: 'foo', date: 'bar', firstParagraph: 'bat', secondParagraph: 'spam', thirdParagraph: 'kitty'})
+const testArticle = ({ title: 'foo', date: 'bar', firstParagraph: 'bat', secondParagraph: 'spam', thirdParagraph: 'kitty'})
 console.log(testArticle)
-articleMaker()
+articleMaker(testArticle)
 
